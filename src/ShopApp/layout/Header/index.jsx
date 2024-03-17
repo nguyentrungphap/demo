@@ -1,6 +1,6 @@
-import React from "react";
 import { Link } from "react-router-dom";
-
+import SearchIcon from '@mui/icons-material/Search';
+import Logo from './image/logo.png'
 function Header() {
   return (
     <div className="bg-black text-white">
@@ -17,14 +17,14 @@ function Header() {
               placeholder="Enter your keyword ..."
             />
             <button className="px-3 text-black bg-white">
-              <img className="h-5 w-5" src="./image/logo.png" />
+              <SearchIcon className="h-5 w-5"/>
             </button>
           </div>
           <div>
             <img
-              src="/path-to-kala-logo.png"
-              alt="KALA Logo"
-              className="h-12"
+              src={Logo}
+              alt="Logo"
+              className="h-32"
             />
           </div>
           <div className="flex items-center space-x-4">
@@ -41,7 +41,6 @@ function Header() {
               <Link to="/register" className="hover:text-gray-300">
                 REGISTER
               </Link>
-              <img className="h-6 w-6" />
             </div>
           </div>
         </div>
